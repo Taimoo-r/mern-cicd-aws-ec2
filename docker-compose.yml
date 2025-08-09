@@ -1,0 +1,11 @@
+version: '3'
+services:
+  client:
+    image: taimoorz/mern-client
+    ports:
+      - '3000:80'
+
+  server:
+    image: taimoorz/mern-server
+    ports:
+      - '5000:5000'
