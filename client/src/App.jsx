@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div>
-      <h1>We've successfully deployed CI/CD pipeline</h1>
+      <h1>We've successfully deployed CI/CD pipeline Man!</h1>
     </div>
   )
 }
