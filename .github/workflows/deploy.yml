@@ -35,7 +35,9 @@ jobs:
         username: ubuntu
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
+          docker rm -f mern-client mern-server || true
           docker pull ${{ secrets.DOCKER_USERNAME }}/mern-client
           docker pull ${{ secrets.DOCKER_USERNAME }}/mern-server
-          docker run -d --name mern-client -p 80:80 ${{ secrets.DOCKER_USERNAME }}/mern-client
+          docker run -d --name mern-client -p 3000:80 ${{ secrets.DOCKER_USERNAME }}/mern-client
           docker run -d --name mern-server -p 5000:5000 ${{ secrets.DOCKER_USERNAME }}/mern-server
+
